@@ -1,0 +1,8 @@
+<h3> Edit your posts </h3>
+
+<%= form_for [@post.user, @post] do |f| %>
+	<%= f.label :body, "Body" %>
+	<%= f.text_field :body %>
+	<%= f.submit :submit %>
+
+<% end %>

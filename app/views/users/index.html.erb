@@ -1,0 +1,17 @@
+<h3> Here are all the users </h3>
+
+
+<% @users.each do |user| %>
+	First Name: <%= user.fname %>
+	<br>
+	Last Name: <%= user.lname %>
+	<br>
+	Email: <%= user.email %>
+	<br>
+	<%= link_to "Delete this user", user_path(user), method: :delete %>
+	<br>
+	<br>
+<% end %>
+
+
+<%= link_to "Create new user", new_user_path %>
